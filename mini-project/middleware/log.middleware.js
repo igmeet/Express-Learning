@@ -40,7 +40,7 @@ const LogMiddleware = (req,res,next)=> {
    next();
 }
 
-export default LogMiddleware
+export default LogMiddleware;
 
 
 

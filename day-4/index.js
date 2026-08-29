@@ -1,7 +1,13 @@
 // day-4
-// cookies
-// headers
-// status code
+// cookies - 
+// import cookie
+// accessing in req.cookies
+// app.use(cookiesParser()) middleware
+// set a cookie
+// creating manual cookie in header in postman and testing it
+
+// headers - self study - in  notes
+// status code - self study  - in  notes
 
 
 import express from "express";

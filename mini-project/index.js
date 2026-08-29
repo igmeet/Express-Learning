@@ -21,14 +21,15 @@ import LogMiddleware from "./middleware/log.middleware.js";
 const app = express();
 const PORT = 8080;
 
-// inbuilt middleware
-app.use(express.json());
+//➡️ middleware register krta hai app.use(...) 
+// inbuilt middleware // Client se aaya hua JSON request body read karke req.body mein convert karna. incoming request handle hoti hai
+app.use(express.json()); 
 
 // global custom middleware
 app.use(LogMiddleware);
 
 
-// middleware function to routes
+// custom middleware function to routes
 app.use("/public", publicRoutes)
 app.use("/private", privateRoutes)
 

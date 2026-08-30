@@ -1,0 +1,15 @@
+//1 . create auth route
+
+import {Router} from "express";
+import { login, logout } from "../controllers/auth.controller.js";
+
+
+const router = Router();
+
+
+router.get("/login", login);
+
+router.get("/logout", logout);
+
+
+export default router;

@@ -3,10 +3,14 @@ import express from "express";
 import session from "express-session";
 import cookieParser from "cookie-parser";
 
-import authRoute from "../src/routes/auth.routes.js"
+
+import authRoute from "./routes/auth.routes.js"
 
 const app = express();
 const PORT = 8080;
+
+
+
 
 // global middleware
 app.use(express.json());
@@ -27,13 +31,14 @@ app.use(session(
     }
 ))
 
+// auth middleware
+app.use("/auth", authRoute);
+
 // routes 
 app.get("/", (req,res)=> {
     res.status(200).send("Welcome to Task Manager API");
 });
 
-// auth middleware
-app.use("/auth", authRoute);
 
 
 app.listen(PORT, ()=> {

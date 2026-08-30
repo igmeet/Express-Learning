@@ -7,9 +7,9 @@ import { login, logout } from "../controllers/auth.controller.js";
 const router = Router();
 
 
-router.get("/login", login);
+router.post("/login", login);
 
-router.get("/logout", logout);
+router.post("/logout", logout);
 
 
 export default router;

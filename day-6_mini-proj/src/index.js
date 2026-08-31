@@ -5,11 +5,10 @@ import cookieParser from "cookie-parser";
 
 
 import authRoute from "./routes/auth.routes.js"
+import taskRoute from "./routes/task.routes.js"
 
 const app = express();
 const PORT = 8080;
-
-
 
 
 // global middleware
@@ -33,12 +32,12 @@ app.use(session(
 
 // auth middleware
 app.use("/auth", authRoute);
+app.use("/task", taskRoute);
 
 // routes 
 app.get("/", (req,res)=> {
     res.status(200).send("Welcome to Task Manager API");
 });
-
 
 
 app.listen(PORT, ()=> {

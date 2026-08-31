@@ -4,10 +4,10 @@
 //     const { username } = req.body;
 
 //     if (!username) {
-//         return res.status(400).send({ error: "username is required" })
+//         res.status(400).send({ error: "username is required" })
 //     }
 
-//     req.session.user = { username };
+//     res.session.user = { username };
 //     res.cookie("username", username, {
 //         httpOnly: true,
 //         maxAge: 1000 * 60 * 60 * 24
@@ -21,10 +21,10 @@
 //     res.clearCookie("username"); // clearing cookie
     
 //     // destroying session
-//     req.session.destroy((err)=> {
+//     res.session.destroy((err)=> {
 //         if(err) {
 //             console.log("error in logout", err)
-//             return res.status(500).json({
+//             res.status(500).json({
 //                 error : "logout failed"
 //             })
 //         }

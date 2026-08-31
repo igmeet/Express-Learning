@@ -17,3 +17,16 @@
 > 4. Creating new Collection : task-management
 
 
+> 5. import authRoute in index.js and use method , add prefix called "/auth"
+
+> 6. authMiddleware created for safer routes
+
+> 7. task route -->  4 end points - get, post , put , delete
+
+> 8. task controller 
+
+> 9. creating file handler in file.utils.js   
+-> 1. readTask  2. writeTask
+
+
+
